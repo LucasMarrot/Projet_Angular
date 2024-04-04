@@ -13,6 +13,8 @@ import { HeaderComponent } from './components/base/header/header.component';
 import { FooterComponent } from './components/base/footer/footer.component';
 import { ChaudiereCardComponent } from './components/chaudieres/chaudiere-card/chaudiere-card.component';
 import { ChaudiereCatalogueComponent } from './components/chaudieres/chaudiere-catalogue/chaudiere-catalogue.component';
+import { InterventionCatalogueComponent } from './components/interventions/intervention-catalogue/intervention-catalogue.component';
+import { InterventionCardComponent } from './components/interventions/intervention-card/intervention-card.component';
 
 @NgModule({
     declarations: [
@@ -21,6 +23,8 @@ import { ChaudiereCatalogueComponent } from './components/chaudieres/chaudiere-c
         FooterComponent,
         ChaudiereCardComponent,
         ChaudiereCatalogueComponent,
+        InterventionCatalogueComponent,
+        InterventionCardComponent,
     ],
     imports: [
         BrowserModule,

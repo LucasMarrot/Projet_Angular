@@ -1,1 +1,3 @@
-<app-chaudiere-card></app-chaudiere-card>
+<ng-container *ngFor="let uneChaudiere of listChaudieres">
+    <app-chaudiere-card [Chaudiere]="uneChaudiere"></app-chaudiere-card>
+</ng-container>

@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
             {
                 label: 'Liste des chaudières',
                 icon: 'pi pi-fw pi-list',
-                href: '#',
+                url: '/catalogue-chaudieres',
             },
             {
                 label: 'Interventions',
@@ -23,6 +23,7 @@ export class HeaderComponent implements OnInit {
                     {
                         label: "Liste des relevés d'interventions",
                         icon: 'pi pi-fw pi-list',
+                        url: 'catalogue-interventions',
                     },
                     {
                         label: "Saisir un relevé d'intervention",

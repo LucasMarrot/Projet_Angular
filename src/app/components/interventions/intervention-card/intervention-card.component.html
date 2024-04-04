@@ -1,11 +1,11 @@
 <p-card
-    header="{{ laChaudiere.modele }}"
-    subheader="{{ laChaudiere.numDeSerie }}"
+    header="{{ lIntervention.date }}"
+    subheader="{{ lIntervention.duree }}"
     [style]="{ width: '360px' }">
-    <ng-template pTemplate="header">
-        <h1>{{ laChaudiere.nomClient }}</h1>
-        <h2>{{ laChaudiere.adresseClient }}</h2>
-    </ng-template>
+    <ng-template pTemplate="header"> </ng-template>
+    <p>
+        {{ lIntervention.description }}
+    </p>
     <ng-template pTemplate="footer">
         <p-button label="Save" icon="pi pi-check"></p-button>
         <p-button

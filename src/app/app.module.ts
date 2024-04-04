@@ -12,7 +12,7 @@ import { CardModule } from 'primeng/card';
 import { HeaderComponent } from './components/base/header/header.component';
 import { FooterComponent } from './components/base/footer/footer.component';
 import { ChaudiereCardComponent } from './components/chaudieres/chaudiere-card/chaudiere-card.component';
-import { CatalogueChaudieresComponent } from './components/pages/catalogue-chaudieres/catalogue-chaudieres.component';
+import { ChaudiereCatalogueComponent } from './components/chaudieres/chaudiere-catalogue/chaudiere-catalogue.component';
 
 @NgModule({
     declarations: [
@@ -20,7 +20,7 @@ import { CatalogueChaudieresComponent } from './components/pages/catalogue-chaud
         HeaderComponent,
         FooterComponent,
         ChaudiereCardComponent,
-        CatalogueChaudieresComponent,
+        ChaudiereCatalogueComponent,
     ],
     imports: [
         BrowserModule,

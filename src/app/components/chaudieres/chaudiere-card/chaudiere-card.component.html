@@ -3,25 +3,22 @@
     header="Chaudière n°{{ laChaudiere.id }}"
     subheader="{{ laChaudiere.numDeSerie }}"
     [style]="{ width: '360px' }">
-    <ng-template pTemplate="body">
-        <b>Nom du client</b>
-        <p>{{ laChaudiere.nomClient }}</p>
-        <b>Adresse du client</b>
-        <p>{{ laChaudiere.adresseClient }}</p>
-        <b>Modele</b>
-        <p>{{ laChaudiere.modele }}</p>
-        <b>Date de mise en service</b>
-        <p>{{ laChaudiere.dateMiseEnService | date: 'dd/MM/yyyy' }}</p>
-        <b>Interventions</b>
-        <p>{{ laChaudiere.idInterventions }}</p>
+    <ng-template pTemplate="body" class="card-body">
+        <div class="card-info">
+            <b>Nom du client</b>
+            <p>{{ laChaudiere.nomClient }}</p>
+        </div>
+        <div class="card-info">
+            <b>Adresse du client</b>
+            <p>{{ laChaudiere.adresseClient }}</p>
+        </div>
+        <div class="card-info">
+            <b>Modele</b>
+            <p>{{ laChaudiere.modele }}</p>
+        </div>
+        <div class="card-info">
+            <b>Date de mise en service</b>
+            <p>{{ laChaudiere.dateMiseEnService | date: 'dd/MM/yyyy' }}</p>
+        </div>
     </ng-template>
-    <!-- <ng-template pTemplate="footer">
-        <p-tabView>
-            <ng-container *ngFor="let uneIntervention of listInterventions">
-                <p-tabPanel header="{{uneIntervention}}">
-                    <app-intervention-card></app-intervention-card>
-                </p-tabPanel>
-            </ng-container>
-        </p-tabView>
-    </ng-template> -->
 </p-card>

@@ -22,6 +22,7 @@ import { NewInterventionFormComponent } from './components/interventions/new-int
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TabViewModule } from 'primeng/tabview';
+import { DividerModule } from 'primeng/divider';
 
 @NgModule({
     declarations: [
@@ -47,6 +48,7 @@ import { TabViewModule } from 'primeng/tabview';
         InputNumberModule,
         HttpClientModule,
         TabViewModule,
+        DividerModule,
     ],
     providers: [provideClientHydration()],
     bootstrap: [AppComponent],

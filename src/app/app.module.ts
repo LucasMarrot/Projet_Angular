@@ -9,6 +9,9 @@ import { AppComponent } from './app.component';
 import { ButtonModule } from 'primeng/button';
 import { MenubarModule } from 'primeng/menubar';
 import { CardModule } from 'primeng/card';
+import { CalendarModule } from 'primeng/calendar';
+import { InputTextModule } from 'primeng/inputtext';
+import { InputNumberModule } from 'primeng/inputnumber';
 import { HeaderComponent } from './components/base/header/header.component';
 import { FooterComponent } from './components/base/footer/footer.component';
 import { ChaudiereCardComponent } from './components/chaudieres/chaudiere-card/chaudiere-card.component';
@@ -37,6 +40,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         CardModule,
         FormsModule,
         ReactiveFormsModule,
+        CalendarModule,
+        InputTextModule,
+        InputNumberModule,
     ],
     providers: [provideClientHydration()],
     bootstrap: [AppComponent],

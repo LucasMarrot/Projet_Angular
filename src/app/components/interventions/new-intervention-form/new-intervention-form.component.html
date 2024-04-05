@@ -1,47 +1,39 @@
 <form [formGroup]="formulaire">
-    <div class="form-group">
-        <label for="date">Date:</label>
+    <div class="p-field">
+        <label for="date">Date</label>
         <input
             type="date"
             id="date"
-            name="date"
-            class="form-control"
-            ngModel
-            required />
+            formControlName="date"
+            class="p-inputtext" />
     </div>
 
-    <div class="form-group">
-        <label for="description">Description:</label>
+    <div class="p-field">
+        <label for="description">Description</label>
         <input
             type="text"
             id="description"
-            name="description"
-            class="form-control"
-            ngModel
-            required />
+            formControlName="description"
+            class="p-inputtext" />
     </div>
 
-    <div class="form-group">
-        <label for="duree">Durée:</label>
+    <div class="p-field">
+        <label for="duree">Durée</label>
         <input
             type="number"
             id="duree"
-            name="duree"
-            class="form-control"
-            ngModel
-            required />
+            formControlName="duree"
+            class="p-inputtext" />
     </div>
 
-    <div class="form-group">
-        <label for="idChaudiere">ID Chaudière:</label>
+    <div class="p-field">
+        <label for="idChaudiere">ID Chaudière</label>
         <input
             type="number"
             id="idChaudiere"
-            name="idChaudiere"
-            class="form-control"
-            ngModel
-            required />
+            formControlName="idChaudiere"
+            class="p-inputtext" />
     </div>
 
-    <button type="submit" class="btn btn-primary">Soumettre</button>
+    <button type="submit" class="p-button p-button-primary">Soumettre</button>
 </form>

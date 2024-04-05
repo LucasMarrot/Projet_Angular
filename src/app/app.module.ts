@@ -21,6 +21,7 @@ import { InterventionCardComponent } from './components/interventions/interventi
 import { NewInterventionFormComponent } from './components/interventions/new-intervention-form/new-intervention-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TabViewModule } from 'primeng/tabview';
 
 @NgModule({
     declarations: [
@@ -45,6 +46,7 @@ import { HttpClientModule } from '@angular/common/http';
         InputTextModule,
         InputNumberModule,
         HttpClientModule,
+        TabViewModule,
     ],
     providers: [provideClientHydration()],
     bootstrap: [AppComponent],

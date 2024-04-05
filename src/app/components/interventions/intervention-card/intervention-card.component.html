@@ -1,17 +1,17 @@
 <p-card
-    header="{{ lIntervention.date }}"
-    subheader="{{ lIntervention.duree }}"
-    [style]="{ width: '360px' }">
+    header="Intervention n°{{ lIntervention.id }}"
+    subheader="{{ lIntervention.date | date: 'dd/MM/yyyy' }} | {{
+        lIntervention.duree
+    }} min"
+    [style]="{ width: '360px' }"
+    class="card">
     <ng-template pTemplate="header"> </ng-template>
-    <p>
-        {{ lIntervention.description }}
-    </p>
+    <ng-template pTemplate="body">
+        <p>
+            {{ lIntervention.description }}
+        </p>
+    </ng-template>
     <ng-template pTemplate="footer">
-        <p-button label="Save" icon="pi pi-check"></p-button>
-        <p-button
-            label="Cancel"
-            icon="pi pi-times"
-            styleClass="p-button-secondary"
-            [style]="{ 'margin-left': '.5em' }"></p-button>
+        Sur la Chaudière n°{{ lIntervention.idChaudiere }}
     </ng-template>
 </p-card>

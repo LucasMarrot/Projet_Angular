@@ -15,6 +15,8 @@ import { ChaudiereCardComponent } from './components/chaudieres/chaudiere-card/c
 import { ChaudiereCatalogueComponent } from './components/chaudieres/chaudiere-catalogue/chaudiere-catalogue.component';
 import { InterventionCatalogueComponent } from './components/interventions/intervention-catalogue/intervention-catalogue.component';
 import { InterventionCardComponent } from './components/interventions/intervention-card/intervention-card.component';
+import { NewInterventionFormComponent } from './components/interventions/new-intervention-form/new-intervention-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -25,6 +27,7 @@ import { InterventionCardComponent } from './components/interventions/interventi
         ChaudiereCatalogueComponent,
         InterventionCatalogueComponent,
         InterventionCardComponent,
+        NewInterventionFormComponent,
     ],
     imports: [
         BrowserModule,
@@ -32,6 +35,8 @@ import { InterventionCardComponent } from './components/interventions/interventi
         ButtonModule,
         MenubarModule,
         CardModule,
+        FormsModule,
+        ReactiveFormsModule,
     ],
     providers: [provideClientHydration()],
     bootstrap: [AppComponent],

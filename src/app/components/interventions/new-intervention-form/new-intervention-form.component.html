@@ -1,39 +1,113 @@
-<form [formGroup]="formulaire">
-    <div class="p-field">
-        <label for="date">Date</label>
-        <input
-            type="date"
-            id="date"
-            formControlName="date"
-            class="p-inputtext" />
-    </div>
+<div class="form-container">
+    <form [formGroup]="formulaire">
+        <h2>Nouvelle intervention à enregistrer</h2>
+        <div class="p-field">
+            <label for="date">Date</label>
+            <input
+                type="date"
+                id="date"
+                formControlName="date"
+                class="p-inputtext" />
+            <div
+                *ngIf="
+                    formulaire.get('date')?.invalid &&
+                    formulaire.get('date')?.errors &&
+                    (formulaire.get('date')?.dirty ||
+                        formulaire.get('date')?.touched)
+                ">
+                <small
+                    class="text-danger"
+                    *ngIf="formulaire.get('date')?.hasError('required')">
+                    Ce champ est requis.</small
+                ><small
+                    class="text-danger"
+                    *ngIf="formulaire.get('date')?.hasError('min')">
+                    Ce champ doit être supérieur à 0.</small
+                >
+            </div>
+        </div>
 
-    <div class="p-field">
-        <label for="description">Description</label>
-        <input
-            type="text"
-            id="description"
-            formControlName="description"
-            class="p-inputtext" />
-    </div>
+        <div class="p-field">
+            <label for="description">Description</label>
+            <input
+                type="text"
+                id="description"
+                formControlName="description"
+                class="p-inputtext" />
+            <div
+                *ngIf="
+                    formulaire.get('description')?.invalid &&
+                    formulaire.get('description')?.errors &&
+                    (formulaire.get('description')?.dirty ||
+                        formulaire.get('description')?.touched)
+                ">
+                <small
+                    class="text-danger"
+                    *ngIf="formulaire.get('description')?.hasError('required')">
+                    Ce champ est requis.</small
+                >
+            </div>
+        </div>
 
-    <div class="p-field">
-        <label for="duree">Durée</label>
-        <input
-            type="number"
-            id="duree"
-            formControlName="duree"
-            class="p-inputtext" />
-    </div>
+        <div class="p-field">
+            <label for="duree">Durée</label>
+            <input
+                type="number"
+                id="duree"
+                formControlName="duree"
+                class="p-inputtext"
+                min="0" />
+            <div
+                *ngIf="
+                    formulaire.get('duree')?.invalid &&
+                    formulaire.get('duree')?.errors &&
+                    (formulaire.get('duree')?.dirty ||
+                        formulaire.get('duree')?.touched)
+                ">
+                <small
+                    class="text-danger"
+                    *ngIf="formulaire.get('duree')?.hasError('required')">
+                    Ce champ est requis.</small
+                ><small
+                    class="text-danger"
+                    *ngIf="formulaire.get('duree')?.hasError('min')">
+                    Ce champ doit être supérieur à 0.</small
+                >
+            </div>
+        </div>
 
-    <div class="p-field">
-        <label for="idChaudiere">ID Chaudière</label>
-        <input
-            type="number"
-            id="idChaudiere"
-            formControlName="idChaudiere"
-            class="p-inputtext" />
-    </div>
+        <div class="p-field">
+            <label for="idChaudiere">ID Chaudière</label>
+            <input
+                type="number"
+                id="idChaudiere"
+                formControlName="idChaudiere"
+                class="p-inputtext"
+                min="0" />
+            <div
+                *ngIf="
+                    formulaire.get('idChaudiere')?.invalid &&
+                    formulaire.get('idChaudiere')?.errors &&
+                    (formulaire.get('idChaudiere')?.dirty ||
+                        formulaire.get('idChaudiere')?.touched)
+                ">
+                <small
+                    class="text-danger"
+                    *ngIf="formulaire.get('idChaudiere')?.hasError('required')">
+                    Ce champ est requis.</small
+                ><small
+                    class="text-danger"
+                    *ngIf="formulaire.get('idChaudiere')?.hasError('min')">
+                    Ce champ doit être supérieur à 0.</small
+                >
+            </div>
+        </div>
 
-    <button type="submit" class="p-button p-button-primary">Soumettre</button>
-</form>
+        <p-button
+            type="submit"
+            (click)="onFormButtonClick()"
+            [disabled]="formulaire.invalid">
+            Soumettre
+        </p-button>
+    </form>
+</div>

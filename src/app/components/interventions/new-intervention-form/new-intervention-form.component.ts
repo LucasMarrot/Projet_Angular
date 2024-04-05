@@ -17,7 +17,7 @@ export class NewInterventionFormComponent implements OnInit {
     constructor(
         private formBuilder: FormBuilder,
         private router: Router,
-        private InterventionService: InterventionsService
+        private myInterventionService: InterventionsService
     ) {}
 
     ngOnInit(): void {
@@ -27,10 +27,13 @@ export class NewInterventionFormComponent implements OnInit {
         );*/
 
         this.formulaire = this.formBuilder.group({
-            date: [null, [Validators.required]],
-            description: [null, [Validators.required]],
-            duree: [null, [Validators.required]],
-            idChaudiere: [null, [Validators.required]],
+            date: [null, [Validators.required, Validators.min(0)]],
+            description: [
+                null,
+                [Validators.required, Validators.maxLength(255)],
+            ],
+            duree: [null, [Validators.required, Validators.min(0)]],
+            idChaudiere: [null, [Validators.required, Validators.min(0)]],
         });
 
         this.formulaire.valueChanges.subscribe(formValue => {
@@ -47,13 +50,13 @@ export class NewInterventionFormComponent implements OnInit {
     onFormButtonClick = (): void => {
         const newIntervention: Intervention = {
             id: 0,
-            date: this.formulaire.get('title')?.value,
-            description: this.formulaire.get('author')?.value,
-            duree: this.formulaire.get('thumbnail')?.value,
-            idChaudiere: this.formulaire.get('dateDeSortie')?.value,
+            date: this.formulaire.get('date')?.value,
+            description: this.formulaire.get('description')?.value,
+            duree: this.formulaire.get('duree')?.value,
+            idChaudiere: this.formulaire.get('idChaudiere')?.value,
         };
 
-        this.InterventionService.addIntervention(newIntervention).subscribe({
+        this.myInterventionService.addIntervention(newIntervention).subscribe({
             next: () => {
                 this.router.navigateByUrl('/interventions');
             },

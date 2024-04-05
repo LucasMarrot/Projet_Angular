@@ -20,6 +20,7 @@ import { InterventionCatalogueComponent } from './components/interventions/inter
 import { InterventionCardComponent } from './components/interventions/intervention-card/intervention-card.component';
 import { NewInterventionFormComponent } from './components/interventions/new-intervention-form/new-intervention-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -43,6 +44,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         CalendarModule,
         InputTextModule,
         InputNumberModule,
+        HttpClientModule,
     ],
     providers: [provideClientHydration()],
     bootstrap: [AppComponent],
